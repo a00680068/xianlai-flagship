@@ -1,0 +1,1233 @@
+<!doctype html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>鮮來肉品 · 自媒體教做菜與品牌文案專區提案展示 (Client Demo)</title>
+  <meta name="description" content="鮮來肉品旗艦店全新規劃：自媒體教做菜專區、主廚料理短影音 ASMR、老饕學堂品牌文案與食材一鍵訂購方案。" />
+  <link rel="icon" type="image/png" href="./images/xianlai_logo_20261011.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;900&family=Noto+Serif+TC:wght@400;500;600;700;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg-dark: #070605;
+      --bg-card: #0f0d0b;
+      --bg-card-hover: #161411;
+      --border-gold: rgba(201, 152, 91, 0.25);
+      --border-gold-bright: rgba(201, 152, 91, 0.6);
+      --gold-primary: #c9985b;
+      --gold-light: #f5efe6;
+      --gold-amber: #e5a95d;
+      --gold-gradient: linear-gradient(135deg, #e5be82 0%, #c9985b 50%, #8e622b 100%);
+      --text-main: #f5efe6;
+      --text-muted: #9b9080;
+      --text-dim: #6d6457;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; background-color: var(--bg-dark); color: var(--text-main); }
+    body {
+      font-family: 'Plus Jakarta Sans', 'Noto Serif TC', -apple-system, BlinkMacSystemFont, serif;
+      line-height: 1.6;
+      background-color: var(--bg-dark);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Client Banner */
+    .client-banner {
+      background: linear-gradient(90deg, #1f1406 0%, #38250e 50%, #1f1406 100%);
+      border-bottom: 1px solid rgba(201, 152, 91, 0.4);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+    .client-banner-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .client-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 152, 91, 0.2);
+      border: 1px solid var(--gold-primary);
+      padding: 4px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--gold-amber);
+      text-transform: uppercase;
+    }
+    .client-banner-title {
+      font-size: 13px;
+      color: #faf5ec;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .client-nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+    }
+    .client-nav-btn {
+      color: #ded3be;
+      text-decoration: none;
+      padding: 5px 12px;
+      border-radius: 4px;
+      border: 1px solid rgba(201, 152, 91, 0.3);
+      transition: all 0.2s ease;
+      background: rgba(0,0,0,0.3);
+    }
+    .client-nav-btn:hover {
+      border-color: var(--gold-primary);
+      color: #fff;
+      background: rgba(201, 152, 91, 0.2);
+    }
+    .client-nav-btn.primary {
+      background: var(--gold-gradient);
+      color: #0c0d0e;
+      font-weight: 700;
+      border: none;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header Hero */
+    .demo-hero {
+      padding: 60px 0 40px;
+      text-align: center;
+      position: relative;
+      background: radial-gradient(circle at 50% 30%, rgba(201, 152, 91, 0.12) 0%, transparent 70%);
+      border-bottom: 1px solid rgba(201, 152, 91, 0.15);
+    }
+    .hero-eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.3em;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .hero-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(28px, 4.5vw, 44px);
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      line-height: 1.25;
+      color: #faf5ec;
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      max-width: 760px;
+      margin: 0 auto 28px;
+      color: var(--text-muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
+    .proposal-tag-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+    .proposal-tag {
+      padding: 6px 14px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201,152,91,0.25);
+      border-radius: 999px;
+      font-size: 12px;
+      color: #ded3be;
+    }
+
+    /* Section Headers */
+    .section-wrap {
+      padding: 70px 0;
+      position: relative;
+    }
+    .section-wrap.alt-bg {
+      background: #0b0907;
+      border-top: 1px solid rgba(201, 152, 91, 0.15);
+      border-bottom: 1px solid rgba(201, 152, 91, 0.15);
+    }
+    .section-header {
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .section-tag {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.25em;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+    }
+    .section-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(24px, 3.2vw, 34px);
+      font-weight: 700;
+      color: #faf5ec;
+      letter-spacing: 0.03em;
+    }
+    .section-subtitle {
+      color: var(--text-muted);
+      font-size: 14px;
+      max-width: 680px;
+    }
+
+    /* Video Reels Grid */
+    .reels-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+      gap: 20px;
+    }
+    .reel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+    .reel-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-primary);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.6), 0 0 20px rgba(201, 152, 91, 0.2);
+    }
+    .reel-thumb-wrap {
+      position: relative;
+      aspect-ratio: 9/16;
+      max-height: 380px;
+      background: #000;
+      overflow: hidden;
+    }
+    .reel-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .reel-card:hover .reel-thumb-wrap img {
+      transform: scale(1.04);
+    }
+    .reel-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0.85) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 14px;
+    }
+    .reel-badge {
+      align-self: flex-start;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(201,152,91,0.5);
+      color: #faf5ec;
+      font-size: 10px;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    .reel-play-btn {
+      align-self: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(201, 152, 91, 0.9);
+      color: #0c0d0e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      transition: transform 0.2s ease;
+      font-size: 18px;
+    }
+    .reel-card:hover .reel-play-btn {
+      transform: scale(1.15);
+      background: #fff;
+    }
+    .reel-bottom-info {
+      color: #fff;
+    }
+    .reel-duration {
+      font-size: 11px;
+      font-family: monospace;
+      color: #ded3be;
+    }
+    .reel-card-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .reel-card-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #faf5ec;
+      line-height: 1.4;
+      font-family: 'Noto Serif TC', serif;
+    }
+    .reel-card-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .reel-card-action {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 10px;
+      border-top: 1px solid rgba(201, 152, 91, 0.15);
+      font-size: 12px;
+    }
+    .reel-card-btn {
+      color: var(--gold-amber);
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Cooking Recipes 3-Step Section */
+    .recipes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+      gap: 24px;
+    }
+    .recipe-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: relative;
+    }
+    .recipe-card:hover {
+      border-color: var(--gold-primary);
+    }
+    .recipe-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .recipe-tag {
+      font-size: 11px;
+      color: var(--gold-primary);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+    .recipe-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #faf5ec;
+      line-height: 1.35;
+    }
+    .recipe-specs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.03);
+      padding: 6px 12px;
+      border-radius: 4px;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .recipe-steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .step-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: rgba(201, 152, 91, 0.15);
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-amber);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: monospace;
+    }
+    .step-content {
+      flex: 1;
+    }
+    .step-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #ded3be;
+      margin-bottom: 2px;
+    }
+    .step-metric {
+      font-size: 11px;
+      color: var(--gold-primary);
+      font-family: monospace;
+      margin-bottom: 3px;
+    }
+    .step-desc {
+      font-size: 12px;
+      color: #a89f91;
+      line-height: 1.5;
+    }
+    .recipe-bundle-box {
+      background: linear-gradient(135deg, rgba(201, 152, 91, 0.08) 0%, rgba(201, 152, 91, 0.02) 100%);
+      border: 1px solid rgba(201, 152, 91, 0.3);
+      border-radius: 6px;
+      padding: 14px;
+      margin-top: auto;
+    }
+    .bundle-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .bundle-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: #faf5ec;
+    }
+    .bundle-price {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--gold-amber);
+      font-family: monospace;
+    }
+    .bundle-desc {
+      font-size: 11px;
+      color: #9b9080;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+    .order-cta-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--gold-gradient);
+      color: #0c0d0e;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .order-cta-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Magazine Articles Section */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 28px;
+    }
+    .article-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+    }
+    .article-card:hover {
+      border-color: var(--gold-primary);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .article-card-header {
+      padding: 24px 24px 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .article-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      color: var(--gold-primary);
+      font-family: monospace;
+      margin-bottom: 10px;
+    }
+    .article-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #faf5ec;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+    .article-sub {
+      font-size: 13px;
+      color: var(--gold-amber);
+      line-height: 1.4;
+    }
+    .article-card-body {
+      padding: 20px 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .article-lead {
+      font-size: 13px;
+      color: #c4b9a9;
+      line-height: 1.7;
+      text-align: justify;
+    }
+    .quote-box {
+      border-left: 3px solid var(--gold-primary);
+      padding: 10px 14px;
+      background: rgba(201,152,91,0.06);
+      font-size: 12px;
+      color: #ded3be;
+      font-style: italic;
+      line-height: 1.6;
+    }
+    .article-card-footer {
+      padding: 16px 24px;
+      background: rgba(0,0,0,0.2);
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .author-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: #ded3be;
+    }
+    .author-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--gold-primary);
+      color: #0c0d0e;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 11px;
+    }
+
+    /* Modal for Video ASMR */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-backdrop.active {
+      display: flex;
+    }
+    .modal-box {
+      background: #121319;
+      border: 1px solid var(--gold-primary);
+      border-radius: 10px;
+      max-width: 900px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.8);
+      position: relative;
+    }
+    @media(min-width: 768px) {
+      .modal-box {
+        grid-template-columns: 1.2fr 1fr;
+      }
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.6);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      font-size: 16px;
+    }
+    .modal-media-col {
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+    }
+    .modal-media-col video {
+      width: 100%;
+      height: 100%;
+      max-height: 480px;
+      object-fit: cover;
+    }
+    .modal-info-col {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    /* Comparison Box for Client */
+    .proposal-insights-box {
+      background: #14120e;
+      border: 1px solid rgba(201, 152, 91, 0.4);
+      border-radius: 8px;
+      padding: 28px;
+      margin-top: 50px;
+    }
+    .insights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .insight-card {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid rgba(201,152,91,0.2);
+      padding: 16px;
+      border-radius: 6px;
+    }
+    .insight-card h4 {
+      font-size: 14px;
+      color: var(--gold-amber);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .insight-card p {
+      font-size: 12px;
+      color: #b8ab9a;
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    .demo-footer {
+      padding: 40px 0;
+      text-align: center;
+      border-top: 1px solid rgba(201, 152, 91, 0.2);
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky Client Demo Header Banner -->
+  <div class="client-banner">
+    <div class="client-banner-inner">
+      <div class="client-banner-title">
+        <span class="client-badge">PROPOSAL DEMO</span>
+        <strong>鮮來肉品 · 自媒體教做菜與品牌文案專區 提案展示</strong>
+      </div>
+      <div class="client-nav-links">
+        <a href="#recipes-section" class="client-nav-btn">🍴 教做菜專區</a>
+        <a href="#reels-section" class="client-nav-btn">🎬 短影音 ASMR</a>
+        <a href="#articles-section" class="client-nav-btn">📖 品牌文案專區</a>
+        <a href="https://xianlai-meat.vercel.app" target="_blank" class="client-nav-btn">🏛️ EMBER 官網</a>
+        <a href="https://xianlai-web-production.up.railway.app/#shop" target="_blank" class="client-nav-btn primary">🛒 訂購後台</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Header -->
+  <header class="demo-hero">
+    <div class="container">
+      <div class="hero-eyebrow">XIAN LAI MEAT · DIGITAL MEDIA & CONTENT STRATEGY</div>
+      <h1 class="hero-title">「以短影音傳授廚藝，以溫暖文案深植信任」</h1>
+      <p class="hero-desc">
+        為鮮來肉品量身打造之<strong>「自媒體專區」</strong>與<strong>「品牌老饕文案專區」</strong>提案展示。<br />
+        不只解決消費者「買了頂級羊肉不會煎、怕羶味」的顧慮，更能直接以<strong>【一鍵帶走食材包】</strong>無縫導流至 Railway 銷售結帳系統！
+      </p>
+      <div class="proposal-tag-group">
+        <span class="proposal-tag">✨ 兼顧手機與電腦完美排版</span>
+        <span class="proposal-tag">✨ 短影音 ASMR + 3步驟保證粉嫩食譜</span>
+        <span class="proposal-tag">✨ 一鍵跳轉 Railway 購買對應食材</span>
+        <span class="proposal-tag">✨ 創辦人黃健瑀專業職人背書</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 1. 教做菜專區 (Cooking Guides & 3-Step Recipes) -->
+  <section id="recipes-section" class="section-wrap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">STEP-BY-STEP CULINARY GUIDE</span>
+        <h2 class="section-title">自媒體教做菜專區 · 零失敗 3 步驟食譜</h2>
+        <p class="section-subtitle">
+          消費者在官網選購肉品時，最常問「羊排怎麼煎才不會柴？」、「羊肉爐怎麼燉才沒有羶味？」。<br />
+          以清楚的時間、溫度、步驟指引，搭配「使用此食材立即訂購」按鈕，化被動流覽為主動購買！
+        </p>
+      </div>
+
+      <div class="recipes-grid">
+        <!-- Recipe 1: 紐西蘭小羔羊小排 -->
+        <div class="recipe-card">
+          <div class="recipe-header">
+            <div class="recipe-tag">招牌煎排 · 15分鐘即享</div>
+            <h3 class="recipe-title">紐西蘭小羔羊小排 · 4分鐘香煎粉嫩封汁</h3>
+            <div class="recipe-specs">
+              <span>🔥 鍋溫 220°C</span>
+              <span>⏱️ 4-15 分鐘</span>
+              <span>🍖 2-3 人份</span>
+            </div>
+          </div>
+
+          <div class="recipe-steps-list">
+            <div class="step-item">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <div class="step-name">拭乾血水 · 均勻落鹽</div>
+                <div class="step-metric">常溫回溫 15分鐘</div>
+                <div class="step-desc">小排完全退冰後以紙巾吸乾表面水分，抹上少許橄欖油與天然海鹽、研磨黑胡椒。</div>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <div class="step-name">大火封煎 · 雙面各2分</div>
+                <div class="step-metric">鑄鐵高溫 / 直火封汁</div>
+                <div class="step-desc">大火將鍋底燒至冒微白煙，下鍋不急著翻動，每面煎 2 分鐘形成焦糖化梅納酥殼。</div>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <div class="step-name">立骨煎脂 · 溫板靜置</div>
+                <div class="step-metric">靜置 3 分鐘回吸肉汁</div>
+                <div class="step-desc">骨邊立起貼鍋逼出油香，淋上蒜香奶油，起鍋置於溫木板靜置 3 分鐘，切開呈櫻花粉嫩！</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipe-bundle-box">
+            <div class="bundle-header">
+              <span class="bundle-name">📦 推薦食材：紐西蘭小羔羊小排</span>
+              <span class="bundle-price">NT$ 800</span>
+            </div>
+            <p class="bundle-desc">100% 紐西蘭天然草飼 6 個月小羔羊，無羶帶奶香，附贈主廚香料配方。</p>
+            <a href="https://xianlai-web-production.up.railway.app/#shop" target="_blank" class="order-cta-btn">
+              🛒 使用此食材 · 前往訂購
+            </a>
+          </div>
+        </div>
+
+        <!-- Recipe 2: 帶皮羊肉爐慢燉 -->
+        <div class="recipe-card">
+          <div class="recipe-header">
+            <div class="recipe-tag">冬令溫補 · 傳家慢燉</div>
+            <h3 class="recipe-title">帶皮羊肉爐 · 陶砂鍋黑麻油慢燉秘傳</h3>
+            <div class="recipe-specs">
+              <span>🍲 微滾文火 95°C</span>
+              <span>⏱️ 60-75 分鐘</span>
+              <span>👨‍👩‍👧‍👦 4-6 人份</span>
+            </div>
+          </div>
+
+          <div class="recipe-steps-list">
+            <div class="step-item">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <div class="step-name">冷水汆燙 · 截斷血沫</div>
+                <div class="step-metric">小火汆燙 8分鐘</div>
+                <div class="step-desc">帶皮羊肉塊與羊蠍子骨必須冷水下鍋，加入老薑片與米酒，逼出骨髓血水後洗淨。</div>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <div class="step-name">黑麻油煸薑 · 乾炒封香</div>
+                <div class="step-metric">中小火煸至薑片捲曲</div>
+                <div class="step-desc">熱鍋以純黑麻油將老薑煸至微捲焦香，放入羊肉塊大火翻炒至表皮金黃緊縮。</div>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <div class="step-name">砂鍋慢煨 · 膠質凝膏</div>
+                <div class="step-metric">文火慢燉 60分鐘</div>
+                <div class="step-desc">移入陶砂鍋，注入高湯與紅棗枸杞，文火煨 1 小時熄火燜 15 分鐘，皮 Q 肉嫩黏唇。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipe-bundle-box">
+            <div class="bundle-header">
+              <span class="bundle-name">📦 推薦食材：鮮來帶皮羊肉塊</span>
+              <span class="bundle-price">NT$ 300 / 斤</span>
+            </div>
+            <p class="bundle-desc">厚切帶皮三層部位，燉後膠質豐腴彈牙，搭配老火湯底冬令暖心首選。</p>
+            <a href="https://xianlai-web-production.up.railway.app/#shop" target="_blank" class="order-cta-btn">
+              🛒 使用此食材 · 前往訂購
+            </a>
+          </div>
+        </div>
+
+        <!-- Recipe 3: 原塊厚切戰斧 -->
+        <div class="recipe-card">
+          <div class="recipe-header">
+            <div class="recipe-tag">極致聚會 · 侍肉大師</div>
+            <h3 class="recipe-title">熟成帶骨戰斧 · 4cm 厚切大火脆皮雙段封汁</h3>
+            <div class="recipe-specs">
+              <span>🔥 鍋溫 250°C</span>
+              <span>⏱️ 20 分鐘</span>
+              <span>🥩 3-4 人份</span>
+            </div>
+          </div>
+
+          <div class="recipe-steps-list">
+            <div class="step-item">
+              <div class="step-num">01</div>
+              <div class="step-content">
+                <div class="step-name">室溫放鬆 · 拭乾血水</div>
+                <div class="step-metric">退冰回溫 30分鐘</div>
+                <div class="step-desc">4cm 厚切戰斧不可冰冷下鍋，須於室溫放鬆肌理，徹底吸乾水分以利梅納反應。</div>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">02</div>
+              <div class="step-content">
+                <div class="step-name">鑄鐵極溫 · 雙面各90秒</div>
+                <div class="step-metric">極高溫乾燒 / 骨邊炙烤</div>
+                <div class="step-desc">封煎出深金黃褐色脆殼，並將骨邊垂直貼鍋逼出牛脂堅果骨香。</div>
+              </div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">03</div>
+              <div class="step-content">
+                <div class="step-name">烤箱透熱 · 鋁箔靜置</div>
+                <div class="step-metric">180°C 烤8分 / 靜置8分</div>
+                <div class="step-desc">送入烤箱使中心均勻至 54°C，起鍋以鋁箔微覆靜置 8 分鐘讓肉汁回滲。</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="recipe-bundle-box">
+            <div class="bundle-header">
+              <span class="bundle-name">📦 推薦食材：熟成帶骨原塊戰斧</span>
+              <span class="bundle-price">NT$ 2,480</span>
+            </div>
+            <p class="bundle-desc">800g 豪邁帶骨，結合老饕上蓋與肋眼心，附贈主廚特調香草海鹽。</p>
+            <a href="https://xianlai-web-production.up.railway.app/#shop" target="_blank" class="order-cta-btn">
+              🛒 使用此食材 · 前往訂購
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. 短影音專區 (Reels & ASMR Short Videos) -->
+  <section id="reels-section" class="section-wrap alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">CHEF ASMR & CINEMATIC REELS</span>
+        <h2 class="section-title">自媒體短影音專區 · 職人料理實境</h2>
+        <p class="section-subtitle">
+          現代自媒體講究「視覺衝擊」與「療癒聲音」。直火炭烤滋滋聲、順紋45°刀工切下、主廚掌杓慢熬，點擊卡片即可彈窗沈浸式試聽試看！
+        </p>
+      </div>
+
+      <div class="reels-grid">
+        <!-- Reel 1 -->
+        <div class="reel-card" onclick="openVideoModal('reel1')">
+          <div class="reel-thumb-wrap">
+            <img src="./videos/steak_poster.jpg" alt="4K 刀鋒特寫" />
+            <div class="reel-overlay">
+              <span class="reel-badge">🎧 刀鋒劃過霜降</span>
+              <div class="reel-play-btn">▶</div>
+              <div class="reel-bottom-info">
+                <span class="reel-duration">0:38 · 12.8 萬次播放</span>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card-body">
+            <div>
+              <h4 class="reel-card-title">帶骨戰斧原塊手切解構 · 4K 鋒芒特寫</h4>
+              <p class="reel-card-sub">沉穩落刀順紋 45° · 筋膜無痕清修。大馬士革刀劃開肌理的極致純聲。</p>
+            </div>
+            <div class="reel-card-action">
+              <span class="author-pill">
+                <span class="author-avatar">健</span>
+                黃健瑀 主廚示範
+              </span>
+              <span class="reel-card-btn">點擊播放 ↗</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel 2 -->
+        <div class="reel-card" onclick="openVideoModal('reel2')">
+          <div class="reel-thumb-wrap">
+            <img src="./videos/steak_poster.jpg" alt="直火炭烤 ASMR" />
+            <div class="reel-overlay">
+              <span class="reel-badge">🔥 300°C 極溫滋滋聲</span>
+              <div class="reel-play-btn">▶</div>
+              <div class="reel-bottom-info">
+                <span class="reel-duration">0:45 · 24.5 萬次播放</span>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card-body">
+            <div>
+              <h4 class="reel-card-title">300°C 鑄鐵高溫爆發 · 直火炭烤爆汁 ASMR</h4>
+              <p class="reel-card-sub">高溫梅納脆殼 · 油滴跳躍滋滋作響。聽見大自然最純淨的美味交響樂。</p>
+            </div>
+            <div class="reel-card-action">
+              <span class="author-pill">
+                <span class="author-avatar">健</span>
+                黃健瑀 主廚示範
+              </span>
+              <span class="reel-card-btn">點擊播放 ↗</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel 3 -->
+        <div class="reel-card" onclick="openVideoModal('reel3')">
+          <div class="reel-thumb-wrap">
+            <img src="./images/founder_ceo.webp" alt="主廚料理日常" style="object-position: top center;" />
+            <div class="reel-overlay">
+              <span class="reel-badge">🍳 創辦人掌杓實境</span>
+              <div class="reel-play-btn">▶</div>
+              <div class="reel-bottom-info">
+                <span class="reel-duration">0:16 · 18.3 萬次播放</span>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card-body">
+            <div>
+              <h4 class="reel-card-title">侍肉職人 · 健瑀料理日常私房實境</h4>
+              <p class="reel-card-sub">慢火細熬，順應時節解構食材本味。「懂吃的人懂得等待，火候到了就是極致。」</p>
+            </div>
+            <div class="reel-card-action">
+              <span class="author-pill">
+                <span class="author-avatar">健</span>
+                黃健瑀 主廚示範
+              </span>
+              <span class="reel-card-btn">點擊播放 ↗</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Reel 4 -->
+        <div class="reel-card" onclick="openVideoModal('reel4')">
+          <div class="reel-thumb-wrap">
+            <img src="./images/charity_kiwanis.jpg" alt="公益行善紀實" />
+            <div class="reel-overlay">
+              <span class="reel-badge">❤️ 走入偏鄉送暖</span>
+              <div class="reel-play-btn">▶</div>
+              <div class="reel-bottom-info">
+                <span class="reel-duration">0:59 · 9.6 萬次播放</span>
+              </div>
+            </div>
+          </div>
+          <div class="reel-card-body">
+            <div>
+              <h4 class="reel-card-title">善念暖心 · 車車愛心行善會社會紀實</h4>
+              <p class="reel-card-sub">以刀鋒解構肌理，以溫度守護善念。走入那瑪夏與高雄偏鄉，溫暖長輩與孩童。</p>
+            </div>
+            <div class="reel-card-action">
+              <span class="author-pill">
+                <span class="author-avatar">車</span>
+                車車愛心行善會
+              </span>
+              <span class="reel-card-btn">點擊播放 ↗</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 品牌文案專區 (Founder's Journal & Brand Stories) -->
+  <section id="articles-section" class="section-wrap">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FOUNDER'S JOURNAL & MEAT ESSAYS</span>
+        <h2 class="section-title">品牌文案專區 · 健瑀老饕札記</h2>
+        <p class="section-subtitle">
+          高端品牌不能只有產品價目，更需要傳遞匠人情懷與生活品味。透過專題深度文案，讓消費者理解「鮮來肉品」與普通菜市場肉販的根本差異。
+        </p>
+      </div>
+
+      <div class="articles-grid">
+        <!-- Article 1 -->
+        <article class="article-card">
+          <div class="article-card-header">
+            <div class="article-meta">
+              <span>2026.10.02</span>
+              <span>·</span>
+              <span>5 分鐘研讀</span>
+              <span>·</span>
+              <span>老饕學堂 · 羊肉指南</span>
+            </div>
+            <h3 class="article-title">鮮來主廚傳授：紐西蘭小羔羊排 4 分鐘香煎粉嫩封汁術</h3>
+            <p class="article-sub">完全無羶氣、清甜天然奶香與高溫梅納酥殼的黃金法則</p>
+          </div>
+          <div class="article-card-body">
+            <p class="article-lead">
+              許多人對羊肉停留在濃重羶氣的刻板印象，但「鮮來肉品」嚴選的紐西蘭草飼小羔羊，在清澈空氣與純淨牧草培育下，肉質細嫩且帶有甘甜奶香。黃健瑀主廚親自示範：只需一把鑄鐵鍋與 4 分鐘，在家就能煎出米其林星級的粉紅斷面。
+            </p>
+            <div class="quote-box">
+              「羊羶味的根源來自成年綿羊脂肪的揮發性脂肪酸。鮮來只挑 6 個月以下草飼小羔羊，脂肪極為純淨，只需少許片鹽與新鮮迷迭香，便能喚醒大自然的清甜。」
+            </div>
+          </div>
+          <div class="article-card-footer">
+            <div class="author-pill">
+              <span class="author-avatar">健</span>
+              <span>黃健瑀 / 鮮來肉品創辦人</span>
+            </div>
+            <a href="https://xianlai-web-production.up.railway.app/#shop" target="_blank" class="reel-card-btn">
+              選購此款羊排 ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="article-card">
+          <div class="article-card-header">
+            <div class="article-meta">
+              <span>2026.09.20</span>
+              <span>·</span>
+              <span>6 分鐘研讀</span>
+              <span>·</span>
+              <span>老饕學堂 · 燉煮秘技</span>
+            </div>
+            <h3 class="article-title">冬令極致溫補：帶皮羊肉爐與羊蠍子老火湯的慢燉秘傳</h3>
+            <p class="article-sub">砂鍋慢火、老薑去寒、膠質黏唇與乳白骨湯的極上配方</p>
+          </div>
+          <div class="article-card-body">
+            <p class="article-lead">
+              天涼入秋，一鍋熱氣氤氳的帶皮羊肉爐是華人餐桌最深層的慰藉。鮮來特選帶皮羊肉塊與老饕羊蠍子骨，皮 Q 肉嫩，富含天然膠原。由黃健瑀親授「三燜二煨」燉湯訣竅，熬出湯頭清爽回甘、肉塊酥軟化渣的傳家好味道。
+            </p>
+            <div class="quote-box">
+              「純瘦肉久煮容易乾柴，唯有帶皮三層部位，皮層在慢燉後轉化為豐腴黏嘴的明膠。再搭配羊蠍子骨熬出天然乳白骨髓高湯，完全無需添加化學味精。」
+            </div>
+          </div>
+          <div class="article-card-footer">
+            <div class="author-pill">
+              <span class="author-avatar">健</span>
+              <span>黃健瑀 / 鮮來肉品創辦人</span>
+            </div>
+            <a href="https://xianlai-web-production.up.railway.app/#shop" target="_blank" class="reel-card-btn">
+              選購燉湯羊肉 ↗
+            </a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="article-card">
+          <div class="article-card-header">
+            <div class="article-meta">
+              <span>2026.09.10</span>
+              <span>·</span>
+              <span>6 分鐘研讀</span>
+              <span>·</span>
+              <span>老饕學堂 · 刀工哲學</span>
+            </div>
+            <h3 class="article-title">45° 順紋剔膜刀工：寧可多損耗 25%，也要守護入口化渣</h3>
+            <p class="article-sub">在 10°C 溫控低溫室裡，每一刀都是對饕客舌尖的莊嚴承諾</p>
+          </div>
+          <div class="article-card-body">
+            <p class="article-lead">
+              很多工廠為了拼產量，整塊肉連筋帶膜切片出售，客人回家咬到硬筋只能吞下去。「鮮來肉品」創辦人黃健瑀堅持每塊原肉手工修除多餘脂肪與粗韌筋膜，即便這意味著每塊肉要多吸收 20%~25% 的修清損耗，他也絕不妥協。
+            </p>
+            <div class="quote-box">
+              「多修掉兩成肉，少賺兩成錢；但客人吃下去的一口軟嫩與驚艷，是千金也換不來的信任。這就是鮮來肉品做生意的底氣。」
+            </div>
+          </div>
+          <div class="article-card-footer">
+            <div class="author-pill">
+              <span class="author-avatar">健</span>
+              <span>黃健瑀 / 鮮來肉品創辦人</span>
+            </div>
+            <a href="https://xianlai-web-production.up.railway.app/#shop" target="_blank" class="reel-card-btn">
+              選購手工修清原肉 ↗
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <!-- Proposal Strategic Insights for Client Meeting -->
+      <div class="proposal-insights-box">
+        <h3 style="font-family: 'Noto Serif TC', serif; font-size: 20px; color: #faf5ec; display: flex; align-items: center; gap: 8px;">
+          💡 提案給業主時的重點策略建議（與業主討論用）：
+        </h3>
+        <div class="insights-grid">
+          <div class="insight-card">
+            <h4>📌 放在 EMBER 旗艦門面 vs 放在商城的差異</h4>
+            <p><strong>推薦方案（方案 A）</strong>：在 EMBER 首頁保留「教做菜短影音精華區」與「老饕札記專區」以提升高端品牌調性；每個食譜卡片下方放<strong>「一鍵前往訂購食材」</strong>直接連到商城。這樣既維持門面高級感，又能直接轉化訂單！</p>
+          </div>
+          <div class="insight-card">
+            <h4>📌 圖文食譜 vs 短影音的搭配方式</h4>
+            <p><strong>雙軌並行</strong>：短影音（ASMR、刀工特寫）負責在手機上抓住眼球與社群分享；圖文 3 步驟食譜則方便煮夫煮婦在廚房一邊看手機一邊照著煎。兩者相輔相成，效果最好！</p>
+          </div>
+          <div class="insight-card">
+            <h4>📌 文案專區對 Google SEO 與信任感的加分</h4>
+            <p>寫入「如何去除羊羶味」、「小羔羊排煎法」等專業知識文，能在 Google 搜尋吸引大量主動尋找羊肉食譜的精準客人，將自然搜尋流量轉化為鮮來肉品的忠實回購客戶！</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Modal -->
+  <div id="videoModal" class="modal-backdrop" onclick="closeModalOnBackdrop(event)">
+    <div class="modal-box">
+      <button class="modal-close-btn" onclick="closeVideoModal()">✕</button>
+      <div class="modal-media-col">
+        <video id="modalVideoPlayer" controls playsinline>
+          <source id="modalVideoSource" src="./videos/steak_hero_loop.mp4" type="video/mp4" />
+          您的瀏覽器不支援影片播放。
+        </video>
+      </div>
+      <div class="modal-info-col">
+        <div>
+          <div id="modalBadge" class="reel-badge" style="margin-bottom: 10px;">ASMR 特寫</div>
+          <h3 id="modalTitle" style="font-family: 'Noto Serif TC', serif; font-size: 20px; color: #faf5ec; margin-bottom: 8px; line-height: 1.35;">影片標題</h3>
+          <p id="modalDesc" style="font-size: 13px; color: #c4b9a9; line-height: 1.6; margin-bottom: 14px;">影片解說描述...</p>
+          <div id="modalQuote" class="quote-box" style="margin-bottom: 14px;">主廚金句</div>
+        </div>
+
+        <div>
+          <a id="modalBuyLink" href="https://xianlai-web-production.up.railway.app/#shop" target="_blank" class="order-cta-btn">
+            🛒 前往商城購買本片食材
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="demo-footer">
+    <div class="container">
+      <p style="margin-bottom: 8px;">鮮來肉品 Xian Lai Meat · 頂級羊肉與原塊肉品專門家</p>
+      <p style="font-size: 11px; color: #7a7061;">
+        © 2026 Xian Lai Meat. 本展示頁專為新功能提案與業主討論所設計。
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    const REELS_DATA = {
+      reel1: {
+        badge: '🎧 4K 刀鋒劃過霜降之音',
+        title: '帶骨戰斧原塊手切解構 · 4K 鋒芒特寫',
+        desc: '主廚黃健瑀手持 27cm 大馬士革職人分切刀，一刀到底劃開帶骨肋眼肌理，雪花大理石與深紅肌纖維在鏡頭前綻放。',
+        quote: '「刀刃要像微風穿過竹林，順應肌理而不是撕裂它。每一塊肉，都有它專屬的呼吸節奏。」',
+        video: './videos/steak_hero_loop.mp4',
+        buyUrl: 'https://xianlai-web-production.up.railway.app/#shop'
+      },
+      reel2: {
+        badge: '🔥 300°C 鑄鐵直火炭烤',
+        title: '300°C 鑄鐵高溫爆發 · 直火炭烤爆汁 ASMR',
+        desc: '下鍋瞬間的高分貝爆裂滋滋聲，伴隨焦糖化堅果香氣漫延。表皮金黃酥化，內裡如粉紅寶石般鮮嫩。',
+        quote: '「聽這聲音。這不是烹飪，這是大自然最頂級的交響樂。」',
+        video: './videos/steak_hero_loop.mp4',
+        buyUrl: 'https://xianlai-web-production.up.railway.app/#shop'
+      },
+      reel3: {
+        badge: '🍳 創辦人料理實境',
+        title: '侍肉職人 · 健瑀料理日常私房實境',
+        desc: '創辦人黃健瑀親自於廚房慢火烹調，展示對食材火候與分寸的深厚功力。',
+        quote: '「懂吃的人懂得等待。掌握了火候與溫度，就是最棒的味覺饗宴。」',
+        video: './videos/founder_cooking.mp4',
+        buyUrl: 'https://xianlai-web-production.up.railway.app/#shop'
+      },
+      reel4: {
+        badge: '❤️ 車車愛心行善公益行動',
+        title: '善念暖心 · 車車愛心行善會社會紀實',
+        desc: '走入高雄在地社區與長者身邊，捐贈營養餐食與溫暖物資，踐行「以刀鋒解構肌理，以溫度守護善念」的品牌初心。',
+        quote: '「做生意講誠信，做人講溫度。鮮來肉品不只追求極致品質，更要把這份福氣分享出去。」',
+        video: './videos/founder_charity.mp4',
+        buyUrl: 'https://xianlai-web-production.up.railway.app/#shop'
+      }
+    };
+
+    function openVideoModal(reelId) {
+      const data = REELS_DATA[reelId];
+      if (!data) return;
+
+      document.getElementById('modalBadge').innerText = data.badge;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDesc').innerText = data.desc;
+      document.getElementById('modalQuote').innerText = data.quote;
+      document.getElementById('modalBuyLink').href = data.buyUrl;
+
+      const player = document.getElementById('modalVideoPlayer');
+      const source = document.getElementById('modalVideoSource');
+      source.src = data.video;
+      player.load();
+      player.play().catch(e => console.log('Autoplay handled:', e));
+
+      document.getElementById('videoModal').classList.add('active');
+    }
+
+    function closeVideoModal() {
+      const modal = document.getElementById('videoModal');
+      modal.classList.remove('active');
+      const player = document.getElementById('modalVideoPlayer');
+      player.pause();
+    }
+
+    function closeModalOnBackdrop(e) {
+      if (e.target.id === 'videoModal') {
+        closeVideoModal();
+      }
+    }
+  </script>
+</body>
+</html>
