@@ -1,0 +1,1 @@
+import{c as e,o as t,s as n,t as r}from"./jsx-runtime-D0eysxCh.js";import"./ember-exocmyua.js";import{t as i}from"./EmberApp-BJyXBugO.js";var a=e(n(),1),o=t(),s=r();(0,o.createRoot)(document.getElementById(`root`)).render((0,s.jsx)(a.StrictMode,{children:(0,s.jsx)(i,{})}));
