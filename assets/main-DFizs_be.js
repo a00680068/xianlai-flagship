@@ -1,0 +1,1 @@
+import{o as e,t}from"./jsx-runtime-D0eysxCh.js";import"./ember-XF9beCsk.js";import{t as n}from"./EmberApp-Dr0BDGZa.js";var r=e(),i=t();(0,r.createRoot)(document.getElementById(`root`)).render((0,i.jsx)(n,{}));
